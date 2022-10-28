@@ -90,7 +90,7 @@ def httpGetCallback(response, data) {
 		return
 	}
 		
-	if (response.getStatus() == 200) {
+	if (response.getStatus() == 200 || response.getStatus() == 403) {
 		state.tryCount = 0
 		
 		if (device.currentValue('presence') != "present") {
